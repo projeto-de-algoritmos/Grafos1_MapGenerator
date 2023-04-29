@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph MapMaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <h1>Awesome Graph Map Generator</h1>
+
+    <div style="background-color: #f5c8b3; border-style:dotted"> 
+        <h3>Como utilizar a aplicação:</h3>
+        <dl>
+            <dt>Adicione cidades</dt>
+            <dd>Insira o nome, descrição e vizinhos da cidade</dd>
+            <dt>Gerando o grafo resultante</dt>
+            <dd>Com todas as cidades criadas gere o Grafo resultante</dd>
+            <dt>Calculando caminhos</dt>
+            <dd>Selecione a cidade de partida e chegada e descubra o melhor caminho entre elas</dd>
+        </dl>
+    </div>
+
+    <div id="city__form">
+        <form id="add__City">
+            <label for="add__Cidade" style="color: blue;">Adicionar cidade nova</label>
+            <br />
+            <label for="text"> Insira o nome da cidade:</label>
+            <input type="text" id="text" />
+            <br />
+            <label for="city__description">Insira a descrição da cidade:</label>
+            <input type="text" id="city__description"/>
+            <br />
+            <label for="vizinhos">Insira os vizinhos:</label>
+            <input type="cidade" id="vizinhos"/>
+            <br />
+            <input type="submit" value="Enviar valores" />
+          </form>
+    </div>
+
+    <div id="city__list">
+        
+
+    </div>
+
+</body>
+</html>
