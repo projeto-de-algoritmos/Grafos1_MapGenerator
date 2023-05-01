@@ -34,7 +34,6 @@
                 <input type="text" name="city__name" id="nome" required>
             </label>
         </div>
-
         <div>
             <label for="city__description">
                 Insira a descrição da cidade:
@@ -42,27 +41,46 @@
                 <input type="text" name="city__description" id="description" required>
             </label>
         </div>
-
         <div>
             <button type="submit" id="submitbtn"> Adicionar cidade</button>
         </div>
+    </form>
 
+    <br>
+
+    <form>
+
+        <label for="origem">Adicionar estrada de:</label>
+            <select id="origem" name="origem">
+                
+            </select>
+
+        <label for="destino">para:</label>
+            <select id="destino" name="destino">
+
+            </select>
+        
+        <button type="button" id="adicionar-estrada">Adicionar</button>
+    
     </form>
 
     <br />
 
-    <table id="city-list">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+    <div>
+        <label> Cidades existentes</label>
+        <table id="city-list">
+            <thead>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
-      <script  src="main.js"></script>
+    <script  src="main.js"></script>
 
 
 </body>
