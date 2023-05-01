@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graph MapMaker</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body >
     <h1>Awesome Graph Map Generator</h1>
 
@@ -22,27 +24,64 @@
         </dl>
     </div>
 
-    <div id="city__form">
-        <form id="add__City">
-            <label for="add__Cidade" style="color: blue;">Adicionar cidade nova</label>
-            <br />
-            <label for="text"> Insira o nome da cidade:</label>
-            <input type="text" id="text" />
-            <br />
-            <label for="city__description">Insira a descrição da cidade:</label>
-            <input type="text" id="city__description"/>
-            <br />
-            <label for="vizinhos">Insira os vizinhos:</label>
-            <input type="cidade" id="vizinhos"/>
-            <br />
-            <input type="submit" value="Enviar valores" />
-          </form>
-    </div>
+    <br>
 
-    <div id="city__list">
+    <form action="" method="post" id="formulario">
+        <div>
+            <label for="city__name">
+                Insira o nome da cidade:
+                <br />
+                <input type="text" name="city__name" id="nome" required>
+            </label>
+        </div>
+        <div>
+            <label for="city__description">
+                Insira a descrição da cidade:
+                <br />
+                <input type="text" name="city__description" id="description" required>
+            </label>
+        </div>
+        <div>
+            <button type="submit" id="submitbtn"> Adicionar cidade</button>
+        </div>
+    </form>
+
+    <br>
+
+    <form>
+
+        <label for="origem">Adicionar estrada de:</label>
+            <select id="origem" name="origem">
+                
+            </select>
+
+        <label for="destino">para:</label>
+            <select id="destino" name="destino">
+
+            </select>
         
+        <button type="button" id="adicionar-estrada">Adicionar</button>
+    
+    </form>
 
+    <br />
+
+    <div>
+        <label> Cidades existentes</label>
+        <table id="city-list">
+            <thead>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
+
+    <script  src="main.js"></script>
+
 
 </body>
 </html>
