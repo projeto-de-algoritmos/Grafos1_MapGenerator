@@ -7,7 +7,7 @@
 |Matrícula | Aluno |
 | -- | -- |
 | 19/0020407  |  Thiago Vivan Bastos |
-| xx/xxxxxx  |  Samuel Sato |
+| 20/0069322  |  Samuel Sato |
 
 ## Sobre 
 O projeto se trata de uma aplicação web capaz de registrar cidades e estradas, utilizando conceitos de grafos 1, a fim de auxiliar Dungeon Masters a criarem Mapas de reinos. Por fim, a aplicação será capaz de retornar o melhor caminho entre cidades.
