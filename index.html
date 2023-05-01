@@ -38,58 +38,65 @@
 
     <br>
 
-    <form action="" method="post" id="formulario">
-        <div>
-            <label for="city__name">
-                Insira o nome da cidade:
-                <br />
-                <input type="text" name="city__name" id="nome" required>
-            </label>
-        </div>
-        <div>
-            <label for="city__description">
-                Insira a descrição da cidade:
-                <br />
-                <input type="text" name="city__description" id="description" required>
-            </label>
-        </div>
-        <div>
-            <button type="submit" id="submitbtn"> Adicionar cidade</button>
-        </div>
-    </form>
-
-    <br>
-
-    <form>
-
-        <label for="origem">Adicionar estrada de:</label>
-            <select id="origem" name="origem">
-                
-            </select>
-
-        <label for="destino">para:</label>
-            <select id="destino" name="destino">
-
-            </select>
-        
-        <button type="button" id="adicionar-estrada">Adicionar</button>
+    <div class="container">             
     
-    </form>
+        <div class="itemForms">
+            <form action="" method="post" id="formulario">
+                <div>
+                    <label for="city__name">
+                        Insira o nome da cidade:
+                        <br />
+                        <input type="text" name="city__name" id="nome" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="city__description">
+                        Insira a descrição da cidade:
+                        <br />
+                        <input type="text" name="city__description" id="description" required>
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" id="submitbtn"> Adicionar cidade</button>
+                </div>
+            </form>
 
-    <br />
+            <br>
 
-    <div>
-        <label> Cidades existentes</label>
-        <table id="city-list">
-            <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+            <form>
+
+                <label for="origem">Adicionar estrada de:</label>
+                    <select id="origem" name="origem">
+                        
+                    </select>
+
+                <label for="destino">para:</label>
+                    <select id="destino" name="destino">
+
+                    </select>
+                
+                <button type="button" id="adicionar-estrada">Adicionar</button>
+            
+            </form>
+            
+        </div>
+
+        <div class="itemLista">
+            <div id="lista-cidades">
+                <label> Cidades existentes</label>
+                <table id="city-list">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
     <div id="mynetwork"></div>

@@ -1,8 +1,33 @@
-h1 {
-    color: red;
-    
-}
+/* fontes */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h3 {
+    font-weight: normal;
+  }
+  
+  /* cabeçalho */
+  h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  
 
-#formCity {
-    background-color: #f0f0f0;
-}
+  .container {
+    display: flex;
+
+    justify-items: stretch;
+    align-content: space-evenly;
+    
+  }
+
+  .itemCidades{
+    grid-area: itemCidades;
+  }
+
+
+  .itemForms{
+    grid-area: itemForms;
+  }
