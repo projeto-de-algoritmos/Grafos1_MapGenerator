@@ -37,6 +37,14 @@ function Graph(){
     };
 
     this.addEdge = function(from, to, direcional){
+        for (var i = 0; i < this.edges.length; i++) {
+            var edge = this.edges[i];
+            if (edge.from === from && edge.to === to) {
+                alert("Esta estrada já existe!");
+                return;
+            }
+        }
+        
         var newEdge = new Edge(from, to);
         this.edges.push(newEdge);
     }
