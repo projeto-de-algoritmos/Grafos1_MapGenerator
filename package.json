@@ -1,0 +1,23 @@
+{
+  "name": "grafos1_mapgenerator",
+  "version": "1.0.0",
+  "description": "**Número da Lista**: X<br> **Conteúdo da Disciplina**: XXXXXXXXXX<br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projeto-de-algoritmos/Grafos1_MapGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/projeto-de-algoritmos/Grafos1_MapGenerator/issues"
+  },
+  "homepage": "https://github.com/projeto-de-algoritmos/Grafos1_MapGenerator#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
