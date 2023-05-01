@@ -19,9 +19,21 @@ function Graph(){
         var name1 = name;
         var descrip1 = descrip;
 
-        var city = new Cidade(name1, descrip1, this.nNodes++);
+    // Verifica se o nome da cidade já existe
+    var exists = false;
+    for (var i = 0; i < this.vertices.length; i++) {
+        if (this.vertices[i].nome === name1) {
+            exists = true;
+            break;
+        }
+    }
 
+    if (exists) {
+        alert("A cidade " + name1 + " já existe!");
+    } else {
+        var city = new Cidade(name1, descrip1, this.nNodes++);
         this.addNode(city);
+    }
     };
 
     this.addEdge = function(from, to, direcional){
