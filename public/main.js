@@ -1,24 +1,13 @@
-// A $( document ).ready() block.
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-
-var counter = 0;
-
-class Cidade{
-    constructor(nome, descri){
-    this.id = counter++;
-    this.label = nome;
-    this.nome = nome;
-    this.descri = descri;
-    }
-}
+import Cidade from './cidade.js'
+import Edge from './edge.js'
 
 var myGraph = new Graph();
 
-
 function Graph(){
+
+    this.nNodes = 0;
     this.vertices = [];
+    this.edges = [];
     this.adjList = new Map();
 
     this.addNode = function(Cidade){
@@ -30,10 +19,15 @@ function Graph(){
         var name1 = name;
         var descrip1 = descrip;
 
-        var city = new Cidade(name1, descrip1);
+        var city = new Cidade(name1, descrip1, this.nNodes++);
 
         this.addNode(city);
     };
+
+    this.addEdge = function(from, to, direcional){
+        var newEdge = new Edge(from, to);
+        this.edges.push(newEdge);
+    }
 
     this.updateCityList = function() {
         var table = document.getElementById("city-list");
@@ -47,9 +41,6 @@ function Graph(){
         this.fillCidadesSelect("origem");
         this.fillCidadesSelect("destino");
     };
-
-
-
 }
 
 
@@ -97,25 +88,28 @@ var nodes = new vis.DataSet([
     // { from: 3, to: 3 },
   ]);
 
-  // create a network
-//   var container = document.getElementById("mynetwork");
-//   var data = {
-//     nodes: nodes,
-//     edges: edges,
-//   };
-//   var options = {};
-//   var network = new vis.Network(container, data, options);
-
-
 
 $("#adicionar-estrada").on("click", function(){
-    console.log(myGraph.vertices);
+
+    //recupera vertice selecionado e adiciona aresta
+    var from = $("#origem").val();
+    var to = $("#destino").val();
+    var idFrom = myGraph.vertices.find(x => x.label === from);
+    var idTo = myGraph.vertices.find(x => x.label === to);
+
+    myGraph.addEdge(idFrom.id, idTo.id, true);
+
+    //informa nós e arestas e exibe
     nodes = new vis.DataSet(myGraph.vertices);
+    edges = new vis.DataSet(myGraph.edges);
+    
+    
     var container = document.getElementById("mynetwork");
-  var data = {
-    nodes: nodes,
-    edges: edges,
-  };
+    var data = {
+        nodes: nodes,
+        edges: edges,
+    };
+    
   var options = {};
   var network = new vis.Network(container, data, options);
 })
