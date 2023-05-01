@@ -18,9 +18,9 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 **Linguagem**: Javascript<br>
 
 ## Uso 
-Com o projeto baixado, utilize o terminal para instalar o node.js no repositório do projeto com o comando:
-  npm install
-Em seguida rode o comando:
-  node server.js
-Em seu navegador, acesse "localhost:3000" e utilize a aplicação como desejar.
+Com o projeto baixado, utilize o terminal para instalar o node.js no repositório do projeto com o comando: <br>
+  npm install <br> 
+Em seguida rode o comando: <br>
+  node server.js <br>
+Em seu navegador, acesse "localhost:3000" e utilize a aplicação como desejar. <br>
 
