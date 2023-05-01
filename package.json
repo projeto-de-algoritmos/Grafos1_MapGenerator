@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/projeto-de-algoritmos/Grafos1_MapGenerator#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "vis-network": "^9.1.6"
   }
 }
