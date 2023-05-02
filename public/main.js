@@ -201,7 +201,7 @@ const bfsMenorCaminho = (graph, nodeA, nodeB) => {
         }
         caminho++;
     }
-
+    print(vetCaminho, nodeB);
     return vetCaminho[nodeB];
 };
 
@@ -220,43 +220,56 @@ $("#buscar").on("click", function(){
     
     console.log(myGraph.adjList.get(0)[1]);
 
-    var nodes = new vis.DataSet(myGraph.vertices);
-    var edges = new vis.DataSet(myGraph.edges);
+//     var nodes = new vis.DataSet(myGraph.vertices);
+//     var edges = new vis.DataSet(myGraph.edges);
     
 
-    var container = document.getElementById("mynetwork");
-    var data = {
-        nodes: nodes,
-        edges: edges,
-    };
+//     var container = document.getElementById("mynetwork");
+//     var data = {
+//         nodes: nodes,
+//         edges: edges,
+//     };
 
-  var options = {
-    nodes: {
-        shape: 'dot',
-        size: 30,
-        font: {
-          size: 16,
-          color: "black"
-        },
-        // color: {
-        //   border: 'black',
-        //   color: "#ffffff",
-        // }
-      },
-      edges: {
-        arrows: {
-          to: false
-        }
-      }
-  };
-    var network = new vis.Network(container, data, options);
+//   var options = {
+//     nodes: {
+//         shape: 'dot',
+//         size: 30,
+//         font: {
+//           size: 16,
+//           color: "black"
+//         },
+//         // color: {
+//         //   border: 'black',
+//         //   color: "#ffffff",
+//         // }
+//       },
+//       edges: {
+//         arrows: {
+//           to: false
+//         }
+//       }
+//   };
+    //var network = new vis.Network(container, data, options);
+    
 });
 
+const result = "";
+
 function print(predecessor, v){
+
+    var table = document.getElementById("result");
+    table.innerHTML = "";
+
     if (predecessor[v] >= 0){
         print(predecessor, predecessor[v]);
-        myGraph.vertices.find(x => x.id = v).group = 1;
+        // myGraph.vertices.find(x => x.id = v).group = 1;
+        //result.concat(string(predecessor[v] + " "));
         console.log(predecessor[v]) 
+        // $('#result').text(predecessor[v]);
+
+            var row = table.insertRow();
+            row.insertCell().innerHTML = cpredecessor[v];
+    
     }
 }
 
