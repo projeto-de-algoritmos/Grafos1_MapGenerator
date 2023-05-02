@@ -20,14 +20,35 @@ function Graph(){
         var name1 = name;
         var descrip1 = descrip;
 
+    // Verifica se o nome da cidade já existe
+    var exists = false;
+    for (var i = 0; i < this.vertices.length; i++) {
+        if (this.vertices[i].nome === name1) {
+            exists = true;
+            break;
+        }
+    }
+
+    if (exists) {
+        alert("A cidade " + name1 + " já existe!");
+    } else {
         var city = new Cidade(name1, descrip1, this.nNodes++);
 
         city.group = 0;
 
         this.addNode(city);
+    }
     };
 
     this.addEdge = function(from, to, direcional){
+        for (var i = 0; i < this.edges.length; i++) {
+            var edge = this.edges[i];
+            if (edge.from === from && edge.to === to) {
+                alert("Esta estrada já existe!");
+                return;
+            }
+        }
+        
         this.adjList.get(from).push(to);
         this.adjList.get(to).push(from);
         var newEdge = new Edge(from, to);

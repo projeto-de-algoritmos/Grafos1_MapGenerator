@@ -24,13 +24,13 @@
 <body >
     <h1>Awesome Graph Map Generator</h1>
 
-    <div style="background-color: #f5c8b3; border-style:dotted"> 
+    <div class="instrucoes"> 
         <h3>Como utilizar a aplicação:</h3>
         <dl>
             <dt>Adicione cidades</dt>
-            <dd>Insira o nome, descrição e vizinhos da cidade</dd>
-            <dt>Gerando o grafo resultante</dt>
-            <dd>Com todas as cidades criadas gere o Grafo resultante</dd>
+            <dd>Insira o nome, descrição</dd>
+            <dt>Adicione estradas</dt>
+            <dd>Selecione a cidade de origem e destino da estrada</dd>
             <dt>Calculando caminhos</dt>
             <dd>Selecione a cidade de partida e chegada e descubra o melhor caminho entre elas</dd>
         </dl>
@@ -38,37 +38,40 @@
 
     <br>
 
-    <form action="" method="post" id="formulario">
-        <div>
-            <label for="city__name">
-                Insira o nome da cidade:
-                <br />
-                <input type="text" name="city__name" id="nome" required>
-            </label>
-        </div>
-        <div>
-            <label for="city__description">
-                Insira a descrição da cidade:
-                <br />
-                <input type="text" name="city__description" id="description" required>
-            </label>
-        </div>
-        <div>
-            <button type="submit" id="submitbtn"> Adicionar cidade</button>
-        </div>
-    </form>
+    <div class="container">             
+    
+        <div class="itemForms">
+            <form action="" method="post" id="formulario">
+                <div>
+                    <label for="city__name">
+                        Insira o nome da cidade:
+                        <br />
+                        <input type="text" name="city__name" id="nome" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="city__description">
+                        Insira a descrição da cidade:
+                        <br />
+                        <input type="text" name="city__description" id="description" required>
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" id="submitbtn"> Adicionar cidade</button>
+                </div>
+            </form>
 
-    <br>
+            <br>
 
-    <form>
+            <form>
 
-        <label for="origem">Adicionar estrada de:</label>
-            <select id="origem" name="origem">
-                
-            </select>
+                <label for="origem">Adicionar estrada de:</label>
+                    <select id="origem" name="origem">
+                        
+                    </select>
 
-        <label for="destino">para:</label>
-            <select id="destino" name="destino">
+                <label for="destino">para:</label>
+                    <select id="destino" name="destino">
 
             </select>
         
@@ -99,18 +102,22 @@
 
     <br />
 
-    <div>
-        <label> Cidades existentes</label>
-        <table id="city-list">
-            <thead>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        <div class="itemLista">
+            <div id="lista-cidades">
+                <label style="font-weight: bold;"> Cidades existentes</label>
+                <table id="city-list">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
     <div id="mynetwork"></div>

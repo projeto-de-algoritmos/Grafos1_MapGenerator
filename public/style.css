@@ -1,8 +1,63 @@
-h1 {
-    color: red;
-    
-}
+/* fontes */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(249, 238, 221);
+  }
+  
+  h1, h3 {
+    font-weight: normal;
+  }
+  
+  /* cabeçalho */
+  h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+  }
 
-#formCity {
-    background-color: #f0f0f0;
-}
+  /* instrucoes */
+
+  .instrucoes {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* forms e lista */
+  .container {
+    display: flex;
+    justify-items: stretch;
+    align-content: space-evenly;    
+  }
+
+  .itemLista{
+    background-color: #d5d3d3;
+    border: 1px solid #ccc ;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    max-height: 200px;
+    overflow: auto;
+  }
+
+  .itemForms {
+    background-color: #d5d3d3;
+    border: 1px solid #ccc ;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    max-height: 200px;
+
+  }
+
+  #mynetwork {
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: auto;
+
+  }
+  

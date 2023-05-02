@@ -1,7 +1,6 @@
 # Grafos1_MapGenerator
 
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -16,12 +15,12 @@ O projeto se trata de uma aplicação web capaz de registrar cidades e estradas,
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Javascript<br>
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Com o projeto baixado, utilize o terminal para instalar o node.js no repositório do projeto com o comando: <br>
+  npm install <br> 
+Em seguida rode o comando: <br>
+  node server.js <br>
+Em seu navegador, acesse "localhost:3000" e utilize a aplicação como desejar. <br>
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
