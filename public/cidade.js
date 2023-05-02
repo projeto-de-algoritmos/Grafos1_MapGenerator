@@ -5,6 +5,7 @@ export default class Cidade {
         this.label = nome;
         this.nome = nome;
         this.descri = descri;
+        this.group = 0;
     }
 
     
